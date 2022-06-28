@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <title>Cadastro</title>
+    <script>
+        function mascara(o,f){
+            v_obj=o
+            v_fun=f
+            setTimeout("execmascara()",1)
+        }
+        function execmascara(){
+            v_obj.value=v_fun(v_obj.value)
+        }
+        function mtel(v){
+            v=v.replace(/\D/g,""); //Remove tudo o que não é dígito
+            v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+            v=v.replace(/(\d)(\d{4})$/,"$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+            return v;
+        }
+        function id( el ){
+            return document.getElementById( el );
+        }
+        window.onload = function(){
+            id('phone').onkeyup = function(){
+                mascara( this, mtel );
+            }
+        }
+    </script>
+   
+</head>
+<body>
+
+    <main>
+       
+        <form class="" method="POST">
+
+            <h1>Cadastro da carteirinha</h1>
+            <div class="carteirinha"> 
+                <div>
+                <label for="text">Intituição educacional</label>
+                <br>
+                <input type="text">
+                </div>
+
+            <div>
+                <label for="text">Nome</label>
+                <br>
+                <input type="text">
+            </div>
+
+            <div>
+               <label for="text">CPF</label>
+               <br>
+                <input oninput="mascara(this)" type="text" id="cpf"> 
+            </div>
+
+            <div>
+                <label for="number">matricula</label>
+                <br>
+                <input type="text" id="matricula">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="senha">
+                <label for="password">Senha</label>
+                <br>
+               <input type="password" name="" id="myInput">
+            </div>
+
+            <div>
+                <label for="text">Celular</label>
+                <br>
+                <input type="text" name="phone" id="phone" maxlength="15">
+            </div>
+
+            <div>
+                <input type="submit" value="Cadastrar">
+            </div>
+            </div>
+
+            
+
+        </form>
+    </main>
+   
+    
+</body>
+</html>
