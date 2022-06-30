@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="cadastro.css">
     <title>Cadastro</title>
     <script>
         function mascara(o,f){
@@ -39,6 +39,7 @@
         <form class="" method="POST">
 
             <h1>Cadastro da carteirinha</h1>
+
             <div class="carteirinha"> 
                 <div>
                 <label for="text">Intituição educacional</label>
@@ -46,25 +47,25 @@
                 <input type="text">
                 </div>
 
-            <div>
+            <div class="nome">
                 <label for="text">Nome</label>
                 <br>
                 <input type="text">
             </div>
 
-            <div>
+            <div class="cpf">
                <label for="text">CPF</label>
                <br>
                 <input oninput="mascara(this)" type="text" id="cpf"> 
             </div>
 
-            <div>
+            <div class="matricula">
                 <label for="number">matricula</label>
                 <br>
                 <input type="text" id="matricula">
             </div>
 
-            <div>
+            <div class="email">
                 <label for="email">Email</label>
                 <br>
                 <input type="email" name="email" id="email">
@@ -76,7 +77,7 @@
                <input type="password" name="" id="myInput">
             </div>
 
-            <div>
+            <div class="celular">
                 <label for="text">Celular</label>
                 <br>
                 <input type="text" name="phone" id="phone" maxlength="15">
@@ -85,9 +86,7 @@
             <div>
                 <input type="submit" value="Cadastrar">
             </div>
-            </div>
-
-            
+            </div>    
 
         </form>
     </main>
