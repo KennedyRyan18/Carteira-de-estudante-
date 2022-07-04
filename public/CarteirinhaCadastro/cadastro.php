@@ -69,7 +69,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-    <link rel="stylesheet" href="stylecadastro.php">
+    <link rel="stylesheet" href="\Sistema de Carteirinhas\public\css\stylecadastro.php">
     <title>Cadastro</title>
 
          <!-- mascara para cpf -->
@@ -103,7 +103,7 @@
             <ul>
                 <li><a href="#">Duvidas?</a></li>
                 <li><a href="#">Email</a></li>
-                <li class="login"><a href="/login/index.html">Login</a></li>
+                <li class="login"><a href="\Sistema de Carteirinhas\public\login\login.php">Login</a></li>
             </ul>
         </nav>
     </header>
